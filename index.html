@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AmuseArcade</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="https://kit.fontawesome.com/fa3ed26e4b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="assets/AmuseArcade.png"
+            alt="Logo"
+            width="130"
+            height="auto"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active-link fs-5" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle fs-5"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Games
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="tic_tac_toe/tic_tac_toe.html"
+                    >Tic Tac Toe</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="snake/snake.html"
+                    >Snake Game</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="minesweeper/minesweeper.html"
+                    >Minesweeper</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="memory/memory.html"
+                    >Match the Card</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="1024/1024.html"
+                    >1024 TileMatching</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="quiz/quiz.html">Quiz Time</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#contact">Contact</a>
+            </li>
+
+            <!-- <audio controls src="assets/audio/walen _Gameboy.mp3" autoplay loop></audio> -->
+          </ul>
+          <div class="audio-control">
+            <img
+              id="volumeIcon"
+              src="assets/volume-xmark-solid.svg"
+              alt="Volume Icon"
+            />
+            <!-- Mute icon -->
+            <input
+              type="range"
+              id="volumeSlider"
+              min="0"
+              max="1"
+              step="0.1"
+              value="0"
+              style="width: 100px"
+            />
+            <audio
+              id="audioPlayer"
+              src="assets/audio/walen _Gameboy.mp3"
+              autoplay
+              loop
+            ></audio>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Score card -->
+    <div class="scoreDisplay">
+      <div class="bg-dark text-light p-2" style="border-radius: 15px 15px 0 0">
+        <i
+          class="fa fa-user"
+          style="font-size: 24px; color: white; margin-right: 5px"
+        ></i>
+        <span id="greeting" class="text-uppercase">Guest</span>
+      </div>
+      <div
+        id="scoreDisplay"
+        class="bg-danger text-light p-2"
+        style="border-radius: 0px 0px 15px 15px"
+      ></div>
+
+      <span class="tooltiptext">Play games to score points.</span>
+    </div>
+
+    <!-- Top Part -->
+    <section class="topPart">
+      <div
+        class="container custom-section d-flex flex-column flex-md-row justify-content-center align-items-center"
+      >
+        <div class="order-lg-1 flex-grow-1">
+          <div class="content">
+            <h1>Amuse Arcade</h1>
+            <h2 class="text-dark">Online Gaming Platform</h2>
+            <br />
+            <p class="text-dark">
+              Welcome to Amuse Arcade! Play exciting games directly from your
+              browser. Explore puzzles, adventures, and more, all without
+              downloads. Get ready for endless fun with just one click!
+            </p>
+            <a href="#games">
+              <button class="btn btn-dark">Play Games</button>
+            </a>
+          </div>
+        </div>
+        <div class="order-lg-2 flex-grow-1">
+          <img
+            src="assets/gamingPlatform1.png"
+            class="img-fluid"
+            alt="Sample Image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="games" id="games">
+      <h1 class="text-light">Games</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="tic_tac_toe/tic_tac_toe.html" target="_blank">
+              <img
+                src="https://cdn-images-1.medium.com/max/480/1*kdY26OPGZbeNKJs60q0zUg.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="1024/1024.html" target="_blank">
+              <img
+                src="https://play-lh.googleusercontent.com/IFbdr0zWehRk4KC6inBHua_OgzDjn--3F_i9aPtK4j0pLbYTxEanJlQW7HdQbh6uvYk"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="snake/snake.html" target="_blank">
+              <img
+                src="https://play-lh.googleusercontent.com/sPAZrHEL1qcJvWYa1lrRldlOxyJTnPr8eOI2VcvwaY6ARqirOCeqBEIu34QVLeQ-7aA=w240-h480-rw"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="memory/memory.html" target="_blank">
+              <img
+                src="https://brightchamps.com/blog/wp-content/uploads/2022/03/How-To-Create-A-Card-Matching-Game-On-Scratch-1.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="minesweeper/minesweeper.html" target="_blank">
+              <img
+                src="https://cdn.vox-cdn.com/thumbor/zIw48R65oFzEEdxRr_8YOUVTZS0=/0x0:1125x796/1400x1400/filters:focal(563x398:564x399)/cdn.vox-cdn.com/uploads/chorus_asset/file/13332995/IMG_2867.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="quiz/quiz.html" target="_blank">
+              <img
+                src="https://play-lh.googleusercontent.com/s8RWPIhMP3RYEyxVn8c68Riq5iVcI0qWTezAgur8OPeqpQF1ZKzI-ExWdvEn9a4y7g"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Website Info -->
+    <section class="container my-5 fs-5" style="text-align: justify">
+      <p>
+        Welcome to Amuse Arcade, your gateway to endless fun and entertainment!
+        Dive into a world of captivating games, where excitement meets variety.
+        Explore a collection of thrilling games that promise to challenge your
+        skills, engage your mind, and provide hours of joy. From classic
+        favorites to modern delights, Amuse Arcade offers an immersive gaming
+        experience for everyone. Get ready to play, compete, and enjoy the
+        thrill of gaming in one place!
+      </p>
+
+      <p>
+        Amuse Arcade presents an array of games suitable for all ages! Whether
+        you're young or young at heart, our diverse collection caters to various
+        skill levels and interests. While some games are perfect for kids,
+        others are designed to challenge and entertain teenagers and adults
+        alike. With a mix of classics and innovative titles, there's something
+        here for everyone to enjoy!
+      </p>
+    </section>
+
+    <!-- Contact and Feedback -->
+    <section class="myforms text-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 my-2" id="contact">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/mqakzvja" method="POST">
+              <!-- Contact Us Form Content -->
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" class="form-control" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea
+                  class="form-control messArea"
+                  id="message"
+                  name="message"
+                  rows="13"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark my-2">Submit</button>
+            </form>
+            
+          </div>
+
+          <hr class="hiddenHR" />
+
+          <div class="col-md-6 my-2">
+            <h2>Feedback Form</h2>
+            <form action="https://formspree.io/f/mgvewjql" method="POST">
+              <!-- Feedback Form Content -->
+              <div class="form-group">
+                <label for="gameRating">Game Rating:</label>
+                <select class="form-control" id="gameRating" name="gameRating" required>
+                  <option value="" disabled selected>Select Rating</option>
+                  <option>1 Star</option>
+                  <option>2 Stars</option>
+                  <option>3 Stars</option>
+                  <option>4 Stars</option>
+                  <option>5 Stars</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea class="form-control" id="comments" name="comments" rows="3" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="userExperience">User Experience:</label>
+                <input type="text" class="form-control" id="userExperience" name="userExperience" required />
+              </div>
+              <div class="form-group">
+                <label for="gameSuggestions">Game Suggestions:</label>
+                <textarea class="form-control" id="gameSuggestions" name="gameSuggestions" rows="2"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="improvementAreas">Improvement Areas:</label>
+                <textarea class="form-control" id="improvementAreas" name="improvementAreas" rows="2"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="recommendation">Would you recommend the site?</label>
+                <div class="form-check">
+                  <input class="form-check-input mt-3" type="radio" name="recommendation" id="yesRecommendation" value="yes" required />
+                  <label class="form-check-label" for="yesRecommendation">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input mt-3" type="radio" name="recommendation" id="noRecommendation" value="no" required />
+                  <label class="form-check-label" for="noRecommendation">No</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mario Image -->
+    <section class="mario">
+      <div class="custom-shape-divider-top-1704644950">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <img src="assets/marioBG.jpg" alt="" class="w-100 mt-1" />
+    </section>
+
+    <!-- footer section -->
+    <footer class="site-footer bg-dark">
+      <div class="mycontainer">
+        <div class="logo-section">
+          <img
+            src="assets/AmuseArcade2.png"
+            alt="Logo"
+            width="130"
+            height="auto"
+            class="logo"
+          />
+          <p class="tagline">Joyful gaming! Boundless amusements!</p>
+        </div>
+        <div class="social-section">
+          <h3>Support us by sharing</h3>
+          <div class="social-icons">
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa fa-youtube"></i>
+          </div>
+        </div>
+        <div class="contact-section">
+          <h3>Contact Us</h3>
+          <p class="email">
+            <a href="mailto:ansariasadullah1964@gmail.com"
+              >ansariasadullah1964@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cookie Section -->
+    <div id="cookies" class="bg-dark text-light py-3 fixed-bottom">
+      <div class="container">
+        <div class="subcontainer">
+          <div class="cookies">
+            <p>
+              This website uses cookies to ensure you get the best experience on
+              our website. <a href=""> More info.</a>
+            </p>
+            <p>Please enter your name for better experience.</p>
+
+            <!-- <label for="username">Username:</label> -->
+            <input
+              class="cookieInput"
+              type="text"
+              id="username"
+              class="mb-2"
+              placeholder="Username"
+            />
+            <br />
+            <!-- <label for="email">Email:</label> -->
+            <input
+              class="cookieInput"
+              type="email"
+              id="email1"
+              placeholder="Email"
+            />
+            <div class="w-100 d-flex justify-content-end">
+              <button class="btn btn-danger mt-2 mx-1" id="cancelBtn">
+                Cancel
+              </button>
+
+              <button id="cookies-btn" class="btn btn-primary mt-2">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+
+    <script>
+      const audioPlayer = document.getElementById("audioPlayer");
+      const volumeIcon = document.getElementById("volumeIcon");
+      const volumeSlider = document.getElementById("volumeSlider");
+
+      // Initially, mute the audio
+      audioPlayer.muted = true; // Start muted
+      audioPlayer.volume = 0; // Start with volume at 0
+
+      // Update the audio volume based on the slider
+      volumeSlider.addEventListener("input", (e) => {
+        audioPlayer.volume = e.target.value;
+        updateVolumeIcon(audioPlayer.volume);
+      });
+
+      // Mute/unmute when the volume icon is clicked
+      volumeIcon.addEventListener("click", () => {
+        if (audioPlayer.muted) {
+          audioPlayer.muted = false; // Unmute the audio
+          // Check if the previous volume was zero
+          if (audioPlayer.volume === 0) {
+            audioPlayer.volume = 1; // Set to high volume if previously zero
+            volumeSlider.value = 1; // Update the slider to match high volume
+          }
+          updateVolumeIcon(audioPlayer.volume);
+          audioPlayer.play().catch((error) => {
+            console.error("Playback failed. Try again.");
+          });
+        } else {
+          audioPlayer.muted = true; // Mute the audio
+          updateVolumeIcon(audioPlayer.volume);
+        }
+      });
+
+      // Update the volume icon based on the current volume
+      function updateVolumeIcon(volume) {
+        if (volume === 0 || audioPlayer.muted) {
+          volumeIcon.src = "assets/volume-xmark-solid.svg"; // Mute icon
+        } else if (volume > 0 && volume <= 0.5) {
+          volumeIcon.src = "assets/volume-low-solid.svg"; // Low volume icon
+        } else {
+          volumeIcon.src = "assets/volume-high-solid.svg"; // High volume icon
+        }
+      }
+
+      // Set initial volume based on the slider's value
+      audioPlayer.volume = volumeSlider.value; // Ensure audio volume matches slider value
+    </script>
+  </body>
+</html>

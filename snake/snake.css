@@ -1,0 +1,50 @@
+body {
+    background: url("https://static.vecteezy.com/system/resources/previews/000/373/352/original/blackboard-with-snake-in-jungle-as-background-vector.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #fff;
+  }
+
+  #gameBoard {
+    display: grid;
+    grid-template-columns: repeat(20, 20px); /* Adjust as needed */
+    grid-template-rows: repeat(20, 20px); /* Adjust as needed */
+    gap: 1px;
+    border: 2px solid #000;
+    border-top: 5px solid grey;
+    border-bottom: 5px solid grey;
+    background-color: #fff;
+  }
+
+  .cell {
+    background-color: #ccc;
+  }
+
+  .snake {
+    background-color: #000;
+  }
+
+  
+  .food {
+    background-color: red;
+  }
+
+  .score1{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  button{
+    background: lightgreen;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }

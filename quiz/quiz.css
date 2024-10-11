@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .quiz-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .choices button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .choices button:hover {
+    filter: brightness(90%);
+  }
+  
+  .correct {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .incorrect {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .submit-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  #submitAnswer, #nextQuestion {
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  #submitAnswer:hover, #nextQuestion:hover {
+    filter: brightness(90%);
+  }
+  
+  .choices button.correct {
+    background-color: #28a745 !important;
+    color: #fff !important;
+  }
+  
+  .choices button.incorrect {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+  }
+
+  .feedback {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .feedback.correct {
+    margin-top: 10px;
+    color: green;
+    background: white;
+  }
+  
+  .feedback.incorrect {
+    margin-top: 10px;
+    background: white;
+    color: #dc3545;
+  }
+  
